@@ -19,10 +19,10 @@ services:
     volumes:
       - ./:/var/www
     depends_on:
-      - bd
+      - db
     container_name: project_app
 
-  bd:
+  db:
     image: mysql:8.0
     restart: always
     volumes:
