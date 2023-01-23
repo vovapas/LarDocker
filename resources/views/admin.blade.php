@@ -134,16 +134,43 @@
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-      
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">      
           <li class="nav-item">
             <a href="pages/gallery.html" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
-              <p>
-                Gallery
-              </p>
+              <i class="nav-icon fas fa-shopping-bag"></i>
+              <p>Заказы</p>
             </a>
-          </li>         
+          </li>  
+          <li class="nav-item">
+            <a href="pages/gallery.html" class="nav-link">
+              <i class="nav-icon fas fa-tshirt"></i>
+              <p>Продукты</p>
+            </a>
+          </li> 
+          <li class="nav-item">
+            <a href="pages/gallery.html" class="nav-link">
+              <i class="nav-icon fas fa-tasks"></i>
+              <p>Категории</p>
+            </a>
+          </li> 
+          <li class="nav-item">
+            <a href="pages/gallery.html" class="nav-link">
+              <i class="nav-icon fas fa-tags"></i>
+              <p>Теги</p>
+            </a>
+          </li> 
+          <li class="nav-item">
+            <a href="pages/gallery.html" class="nav-link">
+              <i class="nav-icon fas fa-palette"></i>
+              <p>Цвета</p>
+            </a>
+          </li> 
+          <li class="nav-item">
+            <a href="pages/gallery.html" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>Пользователи</p>
+            </a>
+          </li>   
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
