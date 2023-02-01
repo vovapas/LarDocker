@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Tag;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Tag;
 
 class ShowController extends Controller
 {
@@ -13,8 +14,8 @@ class ShowController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request)
+    public function __invoke(Tag $tag)
     {
-        //
+        return view('tag.show', compact('tag'));
     }
 }
