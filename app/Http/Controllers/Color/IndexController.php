@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Tag;
+namespace App\Http\Controllers\Color;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Tag;
+use App\Models\Color;
 
 class IndexController extends Controller
 {
@@ -16,7 +16,7 @@ class IndexController extends Controller
      */
     public function __invoke()
     {
-        $tags = Tag::all();
-        return view('tag.index', compact('tags'));
+        $colors = Color::all();
+        return view('color.index', compact('colors'));
     }
 }

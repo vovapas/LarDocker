@@ -6,7 +6,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Добавить tag</h1>
+              <h1 class="m-0">Добавить цвет</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">              
@@ -23,7 +23,7 @@
         <div class="container-fluid">
           <!-- Small boxes (Stat box) -->
           <div class="row">
-            <form action="{{ route('tag.store') }}" method="POST">
+            <form action="{{ route('color.store') }}" method="POST">
               @csrf
               
               <div class="form-group">
