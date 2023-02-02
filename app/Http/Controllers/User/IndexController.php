@@ -5,10 +5,11 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CreateController extends Controller
+class IndexController extends Controller
 {
     public function __invoke()
     {
-        return view('user.create');
+        $users = Tag::all();
+        return view('user.index', compact('users'));
     }
 }
