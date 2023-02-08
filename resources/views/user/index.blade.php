@@ -6,7 +6,7 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Tags</h1>
+              <h1 class="m-0">Пользователи</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">              
@@ -26,7 +26,7 @@
             <div class="col-12">
               <div class="card">
                 <div class="card-header">
-                  <a href="{{ route('tag.create') }}" class="btn btn-primary">Добавить</a>
+                  <a href="{{ route('user.create') }}" class="btn btn-primary">Добавить</a>
                 </div>
               </div>
               
@@ -35,14 +35,26 @@
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Наименование</th>            
+                      <th>Имя</th>  
+                      <th>Фамилия</th>
+                      <th>Отчество</th>
+                      <th>Email</th>
+                      <th>Возраст</th>
+                      <th>Пол</th>
+                      <th>Адрес</th>          
                     </tr>
                   </thead>
                   <tbody>
-                    @foreach ($tags as $tag)
+                    @foreach ($users as $user)
                       <tr>
-                        <td>{{ $tag->id }}</td>
-                        <td><a href="{{ route('tag.show', $tag->id) }}">{{ $tag->title }}</a></td>             
+                        <td>{{ $user->id }}</td>
+                        <td><a href="{{ route('user.show', $user->id) }}">{{ $user->name }}</a></td>  
+                        <td>{{ $user->surname }}</td>  
+                        <td>{{ $user->patronymic }}</td>
+                        <td>{{ $user->email }}</td>
+                        <td>{{ $user->age }}</td>
+                        <td>{{ $user->gender }}</td>
+                        <td>{{ $user->address }}</td>         
                       </tr>    
                     @endforeach                                    
                   </tbody>

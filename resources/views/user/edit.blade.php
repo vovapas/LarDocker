@@ -23,11 +23,31 @@
         <div class="container-fluid">
           <!-- Small boxes (Stat box) -->
           <div class="row">
-            <form action="{{ route('tag.update', $tag->id) }}" method="POST">
+            <form action="{{ route('user.update', $user->id) }}" method="POST">
               @csrf
-              @method('patch')              
+              @method('patch') 
+
               <div class="form-group">
-                <input type="text" name="title" class="form-control" value="{{ $tag->title }}" placeholder="Наименование">
+                <input type="text" value="{{ $user->name ?? old('name') }}" name="name" class="form-control" placeholder="Имя">
+              </div>             
+              <div class="form-group">
+                <input type="text" value="{{ $user->surname ?? old('surname') }}" name="surname" class="form-control" placeholder="Фамилия">
+              </div>
+              <div class="form-group">
+                <input type="text" value="{{ $user->patronymic ?? old('patronymic') }}" name="patronymic" class="form-control" placeholder="Отчество">
+              </div>
+              <div class="form-group">
+                <input type="text" value="{{ $user->age ?? old('age') }}" name="age" class="form-control" placeholder="Возраст">
+              </div>
+              <div class="form-group">
+                <input type="text" value="{{ $user->address ?? old('address') }}" name="address" class="form-control" placeholder="Адрес">
+              </div>
+              <div class="form-group">
+                <select name="gender" class="custom-select form-control" id="ExampleSelectBorder">
+                  <option disabled selected>Пол</option>
+                  <option {{ $user->gender == 1 || old('gender') == 1 ? ' selected' : '' }} value="1">Мужской</option>
+                  <option {{ $user->gender == 2 || old('gender') == 1 ? ' selected' : '' }} value="2">Женский</option>
+                </select>
               </div>
     
               <div class="form-group">
